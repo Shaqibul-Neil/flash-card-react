@@ -1,40 +1,68 @@
-import FlashCard from "./FlashCard";
+//import FlashCard from "./FlashCard";
+import { useState } from "react";
+
 const questions = [
   {
     id: 3457,
-    question: "What language is React based on?",
+    query: "What language is React based on?",
     answer: "JavaScript",
   },
   {
     id: 7336,
-    question: "What are the building blocks of React apps?",
+    query: "What are the building blocks of React apps?",
     answer: "Components",
   },
   {
     id: 8832,
-    question: "What's the name of the syntax we use to describe a UI in React?",
+    query: "What's the name of the syntax we use to describe a UI in React?",
     answer: "JSX",
   },
   {
     id: 1297,
-    question: "How to pass data from parent to child components?",
+    query: "How to pass data from parent to child components?",
     answer: "Props",
   },
   {
     id: 9103,
-    question: "How to give components memory?",
+    query: "How to give components memory?",
     answer: "useState hook",
   },
   {
     id: 2002,
-    question:
-      "What do we call an input element that is completely synchronised with state?",
+    query:
+      "What do we call an input element that is completely synchronized with state?",
     answer: "Controlled element",
   },
 ];
 
 const FlashCards = () => {
-  return <div></div>;
+  const [selectedId, setSelectedId] = useState(null);
+
+  const handleClick = (id) => {
+    setSelectedId(id);
+  };
+
+  return (
+    <div className="flashcards">
+      {/* {questions.map((question) => (
+        <FlashCard
+          key={question.value}
+          question={question}
+          selectedId={selectedId}
+          setSelectedId={setSelectedId}
+        />
+      ))} */}
+      {questions.map((question) => (
+        <div
+          key={question.id}
+          className={question.id === selectedId ? "selected" : ""}
+          onClick={() => handleClick(question.id)}
+        >
+          <p>{question.id === selectedId ? question.answer : question.query}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default FlashCards;
