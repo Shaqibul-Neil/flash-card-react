@@ -57,12 +57,4 @@ div.selected {
   color: #fff;
   font-weight: bold;
   font-size: 24px;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  cursor: pointer;
-  height: 280px;
 }

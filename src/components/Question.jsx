@@ -9,7 +9,7 @@ const Question = ({ question, isOpenID, handleClick }) => {
 
   return (
     <div
-      className={isOpenID === id ? "selection" : "question"}
+      className={isOpenID === id ? "selection question" : "question"}
       onClick={() => handleClick(id)}
     >
       <p>{isOpenID === id ? answer : query}</p>
