@@ -21,13 +21,16 @@ body {
   padding: 20px;
 }
 
-.flashcards {
+.flashcards,
+.questions {
+  margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
-.flashcards div {
+.flashcards div,
+.question {
   border: 1px solid #e7e7e7;
   background-color: #f7f7f7;
   border-radius: 7px;
@@ -47,4 +50,19 @@ div.selected {
   color: #fff;
   font-weight: bold;
   font-size: 24px;
+}
+.selection {
+  border: 1px solid #e03131;
+  background-color: #e03131;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  height: 280px;
 }

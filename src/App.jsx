@@ -1,8 +1,14 @@
 import "./App.css";
 import FlashCards from "./components/FlashCards";
+import Questions from "./components/Questions";
 
 function App() {
-  return <FlashCards />;
+  return (
+    <div>
+      <FlashCards />
+      <Questions />
+    </div>
+  );
 }
 
 export default App;
