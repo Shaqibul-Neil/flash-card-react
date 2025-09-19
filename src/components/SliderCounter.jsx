@@ -55,9 +55,11 @@ const SliderCounter = () => {
         <button onClick={handleCounterIncrease}>+</button>
       </div>
       <p className="stepCounter">{getMessage()}</p>
-      <div className={counter > 0 || range > 0 ? "stepCounter" : "hidden"}>
-        <button onClick={handleReset}>Reset</button>
-      </div>
+      {counter > 0 || range > 0 ? (
+        <div className="stepCounter">
+          <button onClick={handleReset}>Reset</button>
+        </div>
+      ) : null}
     </div>
   );
 };
