@@ -19,6 +19,9 @@ const DateCounter = () => {
     setCount((prev) => prev - step);
   };
 
+  const today = new Date();
+  today.setDate(today.getDate() + count);
+
   return (
     <div className="container">
       <div className="stepCounter">
@@ -31,7 +34,14 @@ const DateCounter = () => {
         <p>Count: {count}</p>
         <button onClick={handleIncreaseCount}>+</button>
       </div>
-      <p></p>
+      <p className="stepCounter">
+        {count === 0
+          ? "Today is "
+          : `${Math.abs(count)} days ${
+              count > 0 ? "from today will be " : "ago today was "
+            }`}
+        {today.toDateString()}
+      </p>
     </div>
   );
 };
