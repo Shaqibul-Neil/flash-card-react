@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const DateCounter = () => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
 
   const handleIncrease = () => {

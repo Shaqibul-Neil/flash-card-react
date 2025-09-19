@@ -60,11 +60,14 @@ div.selected {
 }
 .container {
   width: 350px;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 .stepCounter {
   display: flex;
   gap: 5px;
   align-items: center;
   justify-content: center;
+}
+.hidden {
+  display: none;
 }
