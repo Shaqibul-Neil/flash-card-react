@@ -36,8 +36,9 @@ const questions = [
 ];
 const Questions = () => {
   const [isOpenID, setIsOpenID] = useState(null);
-  const handleClick = (id) => {
-    setIsOpenID(isOpenID === id ? null : id);
+  const handleClick = (ChildId) => {
+    //console.log(ChildId);
+    setIsOpenID(isOpenID === ChildId ? null : ChildId);
   };
   return (
     <div className="questions">

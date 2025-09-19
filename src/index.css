@@ -58,3 +58,12 @@ div.selected {
   font-weight: bold;
   font-size: 24px;
 }
+.container {
+  width: 200px;
+  margin: 0 auto;
+}
+.stepCounter {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
